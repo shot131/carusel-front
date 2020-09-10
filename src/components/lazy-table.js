@@ -4,10 +4,11 @@ export default class LazyTable {
         endIndex: 0,
     };
 
-    constructor(dataProvider, element, rowTemplate) {
+    constructor(dataProvider, element, rowTemplate, height = '400px') {
         this.dataProvider = dataProvider;
         this.element = element;
         this.rowTemplate = rowTemplate;
+        this.height = height;
         this.init();
     }
 
@@ -34,7 +35,7 @@ export default class LazyTable {
             scroller.appendChild(this.wrapper);
             scroller.dataset.lazyTableScroller = 'true';
             scroller.style.overflowY = 'scroll';
-            scroller.style.height = '450px';
+            scroller.style.height = this.height;
         }
         return scroller;
     }
