@@ -1,0 +1,57 @@
+*
+    box-sizing border-box
+    
+html, body
+    margin 0px
+    padding 0px
+    width 100%
+    background #fff
+    font-family 'Roboto', sans-serif
+    font-size 16px
+    font-weight 400
+    line-height 1.5em
+    
+.main
+    width 600px
+    margin 0px auto
+    
+.table
+    width 100%
+    border-collapse collapse
+    &-scroll
+        position relative
+        overflow-y scroll
+        height 400px
+    &__head
+        &-cell
+            padding 10px 15px
+            background #efefef
+            font-weight 700
+            text-align left
+            &:nth-child(1)
+                width 20%
+            &:nth-child(2)
+                width 25%
+            &:nth-child(3)
+                width 25%
+            &:nth-child(4)
+                width 30%
+    &__body
+        &-cell
+            padding 10px 15px
+            background #fff
+            border-bottom 1px solid #efefef
+            font-weight 400
+            text-align left
+            vertical-align top
+            &:nth-child(1)
+                width 20%
+            &:nth-child(2)
+                width 25%
+            &:nth-child(3)
+                width 25%
+            &:nth-child(4)
+                width 30%
+    
+    
+

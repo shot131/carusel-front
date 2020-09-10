@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Тестовое задание Frontend-разработчику</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+</head>
+<body>
+	<div class="main">
+		<table class="table">
+			<thead class="table__head">
+				<tr>
+					<th class="table__head-cell">№</th>
+					<th class="table__head-cell">Фамилия</th>
+					<th class="table__head-cell">Имя</th>
+					<th class="table__head-cell">Отчество</th>
+				</tr>
+			</thead>
+		</table>
+		<table class="table">
+			<tbody class="table__body" data-id="lazy-table">
+			</tbody>
+		</table>
+	</div>
+	<script type="application/javascript" src="assets/js/polyfills.js"></script>
+	<script type="application/javascript" src="assets/js/index.js"></script>
+	<script id="row-template" type="text/x-template">
+		<tr>
+			<td class="table__body-cell">{{num}}</td>
+			<td class="table__body-cell">{{surname}}</td>
+			<td class="table__body-cell">{{name}}</td>
+			<td class="table__body-cell">{{fathername}}</td>
+		</tr>
+	</script>
+</body>
+</html>

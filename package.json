@@ -1,0 +1,53 @@
+{
+  "name": "gulp-start",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "shot131 <shot131@gmail.com>",
+  "license": "MIT",
+  "browserslist": [
+    "> 1%"
+  ],
+  "scripts": {
+    "webpack": "cross-env NODE_ENV=production gulp webpack",
+    "analyzer": "webpack-bundle-analyzer stats.json dist/assets/js",
+    "time:build": "powershell Measure-Command { gulp }"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "browser-sync": "^2.26.5",
+    "core-js": "^3.4.5",
+    "cross-env": "^6.0.3",
+    "del": "^5.1.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.7.1",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-debug": "^4.0.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-load-plugins": "^2.0.1",
+    "gulp-newer": "^1.4.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylus": "^2.7.0",
+    "gulp-watch": "^5.0.1",
+    "gulplog": "^1.0.0",
+    "vinyl-named": "^1.1.0",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^15.1.0"
+  }
+}
