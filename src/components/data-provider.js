@@ -2,6 +2,10 @@ function FakeDataProviderException(message) {
     this.message = message;
 }
 
+/**
+ * FakeDataProvider выступает в роли хранилища данных.
+ * Получае на вход число и параметры данных, при попытке доступа к данным рендерит их на лету.
+ */
 export default class FakeDataProvider {
     items = [];
 
@@ -9,6 +13,11 @@ export default class FakeDataProvider {
 
     samples = {};
 
+    /**
+     * @param {int} total задаёт общее количество строк.
+     * @param {Array} fields названия полей.
+     * @param {Object} samples шаблоны для генерации данных.
+     */
     constructor(total, fields, samples) {
         fields.forEach((field) => {
             if (!samples[field]) {
@@ -25,6 +34,10 @@ export default class FakeDataProvider {
         return this.items.length;
     }
 
+    /**
+     * Возвращает строку по её индексу.
+     * @param {int} index индекс нужно строки.
+     */
     getOne(index) {
         if (!this.items[index]) {
             this.items[index] = this.generateFakeData();
@@ -32,6 +45,11 @@ export default class FakeDataProvider {
         return this.items[index];
     }
 
+    /**
+     * Возвращает срез начиная с offset и количеством limit.
+     * @param {int} limit общее число строк в срезе.
+     * @param {int} offset смещение от начала.
+     */
     getList(limit = 10, offset = 0) {
         const items = [];
         let total = limit + offset;
@@ -47,6 +65,9 @@ export default class FakeDataProvider {
         return items;
     }
 
+    /**
+     * Генерирует случайные данные на основе шаблона.
+     */
     generateFakeData() {
         const row = {};
         for (let j = 0, len = this.fields.length; j < len; j += 1) {
